@@ -73,8 +73,8 @@ input::placeholder {
 }
 button {
     position: absolute;
-    top: 168px;
-    right : 100px;
+    top: 165px;
+    right : 50px;
     padding: var(--padding);
     cursor: pointer;
     font-size: var(--fs);
