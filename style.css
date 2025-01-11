@@ -1,0 +1,212 @@
+/* BASE STYLES */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS VARIABLES */
+:root {
+    --primary-font : "Roboto", sans-serif;
+    --secondary-font : "Montserrat", sans-serif;
+
+    --bg-color :  linear-gradient(rgb(0, 100, 55), rgb(120, 250, 42));
+    --bg-secondary-color : rgb(4, 71, 55);
+    --main-color : #fff;
+    --secondary-color : rgb(247, 247, 6);
+    
+    --fs : clamp(0.8rem, 1.2rem, 2rem);
+
+    --padding : clamp(13px, 10px, 5px);
+    --padding-mq : 1.5rem;
+}
+/* GENERAL STYLES */    
+html, body {
+  font-family: var(--secondary-font);
+  background: var(--bg-color);
+}
+/* MAIN CONTENT STYLES */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 50%;
+    padding: 2rem;
+    position: relative;
+}
+h1 {
+    font-family: var(--primary-font);
+    color : var(--secondary-color);
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+}
+#result {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+.palindrome-definition {
+    margin: 100px auto;
+    background-color: green;
+    font-size: 2rem;
+    color: var(--main-color);
+    border-radius: 15px;
+    padding: var(--padding);
+}
+label {
+    font-size: var(--fs);
+}
+input {
+    width: 350px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 20px;
+    outline: none;
+    border: none;
+}
+input::placeholder {
+    color: #000;
+}
+button {
+    position: absolute;
+    top: 168px;
+    right : 100px;
+    padding: var(--padding);
+    cursor: pointer;
+    font-size: var(--fs);
+    border-radius: 5px;
+    border: none;
+    background-color : var(--bg-secondary-color);
+    color: var(--main-color);
+    margin-left: 20px;
+}
+/* FOOTER STYLES */
+footer p{
+    text-align: center;
+    padding: var(--padding);
+    font-size: var(--fs);
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    main {
+        max-width: 90%;
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    input {
+        width: 80%;
+        margin-left: 0;
+    }
+    button {
+        top: 120px;
+        right: 20px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    h1 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    input {
+        width: 75%;
+        margin-left: 0;
+    }
+    button {
+        position: static;
+        margin-top: 20px;
+    }
+    .palindrome-definition {
+        font-size: 1.6rem;
+        padding: 12px;
+    }
+}
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 70%;
+        margin-left: 0;
+    }
+    button {
+        position: static;
+        margin-top: 20px;
+    }
+    .palindrome-definition {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    main {
+        max-width: 70%;
+        padding: var(--padding-mq);
+    }
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    input {
+        width: 350px;
+        margin-left: 0;
+    }
+    button {
+        top: 142px;
+        right: 50px;
+    }
+    .palindrome-definition {
+        font-size: 1.8rem;
+        padding: 12px;
+    }
+}
+@media screen and (max-width : 1280px) {
+    main {
+        max-width: 80%;
+        padding: var(--padding-mq);
+    }
+    h1 {
+        font-size: 2.1rem;
+        margin-bottom: 45px;
+    }
+    input {
+        width: 80%;
+        margin-left: 0;
+    }
+    button {
+        top: 150px;
+        right: 60px;
+    }
+    .palindrome-definition {
+        font-size: 1.9rem;
+        padding: 14px;
+    }
+}
+@media screen and (min-width: 1536px) {
+    main  {
+        padding: var(--padding-mq);
+    }
+    h1 {
+        font-size: 2.1rem;
+        margin-bottom: 45px;
+    }
+    input {
+        width: 50%;
+        margin-left: 0;
+    }
+    button {
+        top: 160px;
+        right: 70px;
+    }
+    .palindrome-definition {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
